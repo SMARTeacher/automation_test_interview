@@ -9,9 +9,23 @@
  * */
 
 
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import java.util.logging.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.Keys;
+
+
 @Test(groups={"localTest"})
 public class GoogleExampleIT {
-	private static final Logger LOGGER = LogManager.getLogger(GoogleExampleIT.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GoogleExampleIT.class.getName());
 	private WebDriver driver;
 	@FindBy(css = "[name='q']")
 	private WebElement searchBar;
@@ -30,14 +44,14 @@ public class GoogleExampleIT {
 		searchBar.clear();
 		searchBar.sendKeys("Milk!");
 		searchBar.sendKeys(Keys.ENTER);
-		LOGGER.info("Page title is: {}", driver.getTitle());
+		LOGGER.info("Page title is: {}" + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().equals("Google"));
 	}
 
 	@BeforeMethod
 	public void setUp() {
-		
-		driver = new new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver","/Users/sharonandrades/Downloads/geckodriver");
+		driver = new FirefoxDriver();
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 60), this);
 		driver.get("http://www.google.com");
 	}
