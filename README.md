@@ -1,10 +1,3 @@
-# automation_test_interview
+# automation_test_interview/game_poc
 
-tips:    
-1. use git clone the code    
-2. create your own branch, please do not use branch: master    
-3. after you completed the code, please push your code to github by using your own branch     
-4. please create the pull request     
-5. that's it, please do NOT merge to branch master    
-
-
+PoC using dynamically created component hooks to automate some level of game qa.
