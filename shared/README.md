@@ -1,0 +1,2 @@
+### How To
+`npm install`

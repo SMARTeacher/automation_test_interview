@@ -1,0 +1,22 @@
+node_modules/
+.vscode
+.DS_STORE
+
+#shared
+/shared/environment-settings/**
+!/shared/environment-settings/template.json
+!/shared/environment-settings/local.json
+
+# migration-helper
+/migration-helper/coverage
+/migration-helper/.nyc_output
+
+**/selenium-standalone.txt
+
+# test-projects-ui/game
+/test-projects-ui/game/screenshots/*.png
+
+# test-projects-ui/content-testing-tool
+/test-projects-ui/content-testing-tool/screenshots/*.png
+
+*/hidden.txt

@@ -1,0 +1,2 @@
+API_NAME=automation-test
+PRODIGY_DEPT=qa

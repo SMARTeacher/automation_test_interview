@@ -1,0 +1,48 @@
+{
+    "BaseUrl": "https://www.<DOMAIN>",
+    "CdnUrl": "https://cdn.prodigygame.com",
+    "AnswersDb": {
+        "host": "<DB_ANSWERS_HOST>",
+        "port": "<DB_ANSWERS_PORT>",
+        "database": "<DB_ANSWERS_DATABASE>",
+        "user": "<DB_ANSWERS_READ_USER>",
+        "password": "<DB_ANSWERS_READ_USER_PWD>"
+    },
+    "StatsDb": {
+      "host": "<DB_STATS_WRITE_HOST>",
+      "port": "<DB_STATS_PORT>",
+      "database": "<DB_STATS_WRITE_NAME>",
+      "user": "<DB_STATS_USER>",
+      "password": "<DB_STATS_PWD>"
+    },
+    "EducationDb": {
+      "host": "<DB_STUDENT_PROGRESSION_WRITE_HOST>",
+      "port": "<DB_STUDENT_PROGRESSION_PORT>",
+      "database": "<DB_STUDENT_PROGRESSION_WRITE_NAME>",
+      "user": "<DB_STUDENT_PROGRESSION_USER>",
+      "password": "<DB_STUDENT_PROGRESSION_PWD>"
+    },
+    "LiveDataDb": {
+      "host": "<DB_LIVEDATA_WRITE_HOST>",
+      "port": "<DB_LIVEDATA_PORT>",
+      "database": "<DB_LIVEDATA_WRITE_NAME>",
+      "user": "<DB_LIVEDATA_USER>",
+      "password": "<DB_LIVEDATA_PWD>"
+    },
+    "UserAbilityDb": {
+      "host": "<DB_USER_ABILITY_WRITE_HOST>",
+      "port": "<DB_USER_ABILITY_PORT>",
+      "database": "<DB_USER_ABILITY_NAME>",
+      "user": "<DB_USER_ABILITY_USER>",
+      "password": "<DB_USER_ABILITY_PWD>"
+    },
+    "DynamoDb": {
+      "assignmentTableName": "<DYNAMO_ASSIGNMENT_DATA_TABLE>"
+    },
+    "LiveReportingDb": {
+      "host": "<DB_REPORTING_WRITE_HOST>",
+      "database": "<DB_REPORTING_WRITE_NAME>",
+      "user": "<DB_REPORTING_USER>",
+      "password": "<DB_REPORTING_PWD>"
+    }
+}
