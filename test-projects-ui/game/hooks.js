@@ -8,7 +8,7 @@ try {
 
   beforeEach(async function () {
     try {
-      await browser.url(`${testCache.EnvironmentSettings.BaseUrl}/Play/`);
+      await browser.url(`${testCache.EnvironmentSettings.BaseUrl}/Play/?automation=true`);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(`beforeEach failed due to ${err}`);
