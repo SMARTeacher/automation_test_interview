@@ -18,10 +18,22 @@ class Util {
 
     const startTime = Date.now();
     let result = null;
+    let error = null;
     do {
-      result = await func();
+      try {
+        result = await func();
+        error = null;
+      } catch (e) {
+        error = e;
+      }
+
       await Util.sleep(sleepms);
+
       if (Date.now() - startTime > timeoutms) {
+        if (error) {
+          throw Error(`${message} with error ${error.message} @ ${callingMethodTrace}`);
+        }
+
         throw Error(`${message} @ ${callingMethodTrace}`);
       }
     } while (result === false || result == null);
