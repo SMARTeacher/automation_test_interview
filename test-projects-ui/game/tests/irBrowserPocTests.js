@@ -1,4 +1,6 @@
 const testCache = require('../../../shared/test-helpers/Cache');
+const Alfred = require('../helpers/Alfred');
+const util = require('./../../../shared/test-helpers/Util').Util;
 
 describe('PoC', function () {
   describe('When I login with a user, select playing at home and then a world', function () {
@@ -23,7 +25,16 @@ describe('PoC', function () {
         student,
         loginResponse.token
       );
-      console.log(JSON.stringify(student, null, 2));
+
+      console.log(`${student.username}: ${student.id}`);
+
+      console.log(await util.retryUntilSuccessOrTimeout(
+        async () => {
+          return await Alfred.collectAutomationObjects();
+        },
+        30000,
+        1000
+      ));
     });
   });
 });
